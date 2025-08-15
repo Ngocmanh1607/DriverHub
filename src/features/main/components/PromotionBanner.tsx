@@ -78,7 +78,9 @@ const styles = StyleSheet.create({
   },
   image: {
     width: BANNER_WIDTH,
-    marginRight: 10,
+    borderRadius: 16,
+    marginRight: 12,
+    resizeMode: 'stretch',
   },
   pagination: {
     flexDirection: 'row',
