@@ -1,9 +1,8 @@
 import { FlatList, StyleSheet, View } from 'react-native';
 import React from 'react';
 
-import Title from '../../../components/Title';
-
 import { ILike } from '../../../assets/svg';
+import Title from '../../../components/Title';
 import { EngineAirFilter } from '../../../assets/images';
 import CardProduct from '../../../components/CardProduct';
 

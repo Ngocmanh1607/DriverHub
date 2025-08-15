@@ -1,8 +1,10 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import colors from '../theme/color';
+
 import ActionButton from './ActionButton';
+
+import colors from '../theme/color';
 import { IFire, IFireCircle } from '../assets/svg';
 
 interface CardProductProps {

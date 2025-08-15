@@ -1,9 +1,10 @@
 import { FlatList, StyleSheet, View } from 'react-native';
 import React from 'react';
-import Title from '../../../components/Title';
+
 import { IPackage } from '../../../assets/svg';
-import colors from '../../../theme/color';
 import { EngineAirFilter } from '../../../assets/images';
+import colors from '../../../theme/color';
+import Title from '../../../components/Title';
 import CardProduct from '../../../components/CardProduct';
 
 const NewInStockSection = () => {

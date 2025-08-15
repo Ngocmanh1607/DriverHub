@@ -6,6 +6,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
+
 import colors from '../theme/color';
 
 type ActionButtonProps = {

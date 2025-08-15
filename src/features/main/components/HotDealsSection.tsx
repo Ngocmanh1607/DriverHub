@@ -1,5 +1,6 @@
 import { Image, StyleSheet, View } from 'react-native';
 import React from 'react';
+
 import { Highlight, Highlight1, Highlight2 } from '../../../assets/images';
 
 const HotDealsSection = () => {

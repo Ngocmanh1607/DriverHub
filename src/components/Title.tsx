@@ -7,8 +7,9 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import colors from '../theme/color';
+
 import { IDArrowRight } from '../assets/svg';
+import colors from '../theme/color';
 
 type TitleProps = {
   icon?: React.ReactNode;

@@ -1,8 +1,9 @@
 import { Image, StyleSheet, View, Text } from 'react-native';
 import React from 'react';
-import Title from '../../../components/Title';
+
 import { IMenu } from '../../../assets/svg';
 import { Article, Article2, Article3 } from '../../../assets/images';
+import Title from '../../../components/Title';
 import colors from '../../../theme/color';
 
 interface ArticleItem {

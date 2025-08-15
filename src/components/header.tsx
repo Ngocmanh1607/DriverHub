@@ -6,12 +6,13 @@ import {
   TextInput,
 } from 'react-native';
 import React, { useState } from 'react';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
 import ISearch from '../assets/svg/ISearch.svg';
 import colors from '../theme/color';
 import ICamera from '../assets/svg/ICamera.svg';
 import IBell from '../assets/svg/IBell.svg';
 import IArrowLeft from '../assets/svg/IArrowLeft.svg';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type HeaderProps = {
   onSearch?: (text: string) => void;

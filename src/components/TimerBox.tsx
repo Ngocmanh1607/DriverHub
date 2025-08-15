@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Svg, { Polygon, Text as SvgText } from 'react-native-svg';
+
 import colors from '../theme/color';
 
 export default function TimerBox({ text }: { text: string }) {

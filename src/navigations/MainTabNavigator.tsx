@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import HomeScreen from '../features/main/HomeScreen';
 import CategoryScreen from '../features/category/CategoryScreen';
 import CartScreen from '../features/cart/CartScreen';
 import NewsScreen from '../features/news/NewsScreen';
 import AccountScreen from '../features/account/AccountScreen';
-
 import { IHome, ICategory, ICart, IBill, IAccount } from '../assets/svg';
 import colors from '../theme/color';
 

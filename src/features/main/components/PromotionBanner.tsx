@@ -1,5 +1,6 @@
 import { StyleSheet, Image, ScrollView, Dimensions, View } from 'react-native';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+
 import Banner from '../../../assets/images/Banner.png';
 import colors from '../../../theme/color';
 

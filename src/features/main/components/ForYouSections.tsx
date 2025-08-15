@@ -1,8 +1,9 @@
 import { FlatList, Image, StyleSheet, View } from 'react-native';
 import React from 'react';
-import Title from '../../../components/Title';
+
 import { IStar } from '../../../assets/svg';
 import { AdsBanner, EngineAirFilter } from '../../../assets/images';
+import Title from '../../../components/Title';
 import CardProduct from '../../../components/CardProduct';
 
 const ForYouSections = () => {

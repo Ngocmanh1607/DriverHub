@@ -1,5 +1,6 @@
 import { View, Image, StyleSheet } from 'react-native';
 import React from 'react';
+
 import { Discount } from '../../../assets/images';
 
 const DiscountSection = () => {

@@ -8,16 +8,17 @@ import {
   FlatList,
 } from 'react-native';
 import React, { useState } from 'react';
-import Header from '../../components/header';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
 import {
   AirFilter,
   AirFilter2,
   CabinFilter,
   FuelFilter,
 } from '../../assets/images';
-import colors from '../../theme/color';
 import { IArrowRight } from '../../assets/svg';
+import colors from '../../theme/color';
+import Header from '../../components/header';
 import Title from '../../components/Title';
 
 const CategoryScreen = () => {

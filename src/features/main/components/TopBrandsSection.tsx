@@ -1,7 +1,8 @@
 import { FlatList, Image, StyleSheet, View } from 'react-native';
 import React from 'react';
-import Title from '../../../components/Title';
+
 import { IDecoration } from '../../../assets/svg';
+import Title from '../../../components/Title';
 import colors from '../../../theme/color';
 import {
   Audi,
