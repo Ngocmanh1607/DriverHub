@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 12,
-    paddingRight: 12,
+    marginHorizontal: 12,
   },
   mainCategoryTitle: {
     fontSize: 16,
@@ -305,6 +305,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: colors.disabled,
     paddingBottom: 12,
+    marginHorizontal: 12,
   },
   subCategoryTitle: {
     fontSize: 14,
@@ -315,12 +316,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    gap: 12,
-    paddingHorizontal: 12,
+    gap: 6,
   },
   productItem: {
     width: '30%',
-    marginBottom: 20,
+    marginBottom: 12,
     alignItems: 'center',
   },
   productImage: {
