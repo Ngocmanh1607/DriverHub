@@ -81,7 +81,7 @@ export default TopSellersSections;
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 16,
+    paddingBottom: 12,
   },
   productsContainer: {
     paddingHorizontal: 12,

@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   listContainer: {
     paddingHorizontal: 12,
     gap: 12,
+    paddingBottom: 16,
   },
   card: {
     flexDirection: 'row',

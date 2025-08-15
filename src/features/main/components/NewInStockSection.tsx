@@ -80,7 +80,8 @@ export default NewInStockSection;
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 12,
+    marginTop: 12,
+    paddingBottom: 12,
     backgroundColor: colors.primaryDark,
   },
   productList: {

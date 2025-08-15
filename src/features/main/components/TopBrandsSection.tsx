@@ -61,7 +61,7 @@ export default TopBrandsSection;
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 12,
+    paddingTop: 12,
   },
   title: {
     lineHeight: 24,

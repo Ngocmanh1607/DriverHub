@@ -184,7 +184,6 @@ const styles = StyleSheet.create({
   },
   productsContainer: {
     paddingHorizontal: 4,
-    paddingBottom: 12,
   },
   productCard: {
     marginRight: 8,
