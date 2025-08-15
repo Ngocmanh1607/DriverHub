@@ -1,11 +1,11 @@
 import {
   View,
-  Text,
   StyleSheet,
   TouchableOpacity,
   StatusBar,
+  TextInput,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import ISearch from '../assets/svg/ISearch.svg';
 import colors from '../theme/color';
 import ICamera from '../assets/svg/ICamera.svg';
@@ -14,11 +14,13 @@ import IArrowLeft from '../assets/svg/IArrowLeft.svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type HeaderProps = {
-  onSearch?: () => void;
+  onSearch?: (text: string) => void;
   onCamera?: () => void;
   onBell?: () => void;
   onBack?: () => void;
   isBack?: boolean;
+  searchValue?: string;
+  onSearchChange?: (text: string) => void;
 };
 
 const Header = ({
@@ -27,8 +29,21 @@ const Header = ({
   onBell,
   isBack,
   onBack,
+  searchValue = '',
+  onSearchChange,
 }: HeaderProps) => {
   const insets = useSafeAreaInsets();
+  const [searchText, setSearchText] = useState(searchValue);
+
+  const handleSearchChange = (text: string) => {
+    setSearchText(text);
+    onSearchChange?.(text);
+  };
+
+  const handleSearch = () => {
+    onSearch?.(searchText);
+  };
+
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <StatusBar barStyle="light-content" />
@@ -43,25 +58,38 @@ const Header = ({
             />
           </TouchableOpacity>
         )}
-        <TouchableOpacity style={styles.searchButton} onPress={onSearch}>
+        <View style={styles.searchButton}>
           <View style={styles.searchInputContainer}>
-            <View style={styles.searchIconContainer}>
+            <TouchableOpacity
+              style={styles.searchIconContainer}
+              onPress={handleSearch}
+              activeOpacity={0.8}
+            >
               <ISearch width={20} height={20} color={colors.textDisabled} />
-            </View>
-            <Text style={styles.searchText}>Tìm kiếm sản phẩm</Text>
+            </TouchableOpacity>
+            <TextInput
+              style={styles.searchInput}
+              placeholder="Tìm kiếm sản phẩm"
+              placeholderTextColor={colors.textDisabled}
+              value={searchText}
+              onChangeText={handleSearchChange}
+              onSubmitEditing={handleSearch}
+              returnKeyType="search"
+            />
           </View>
-          <ICamera width={20} height={20} onPress={onCamera} />
-        </TouchableOpacity>
-        <View>
+          <TouchableOpacity onPress={onCamera}>
+            <ICamera width={20} height={20} />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity onPress={onBell}>
           <View style={styles.dot} />
           <IBell
             width={24}
             height={24}
             style={styles.bellIcon}
             color={colors.background}
-            onPress={onBell}
           />
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -100,10 +128,11 @@ const styles = StyleSheet.create({
   searchIconContainer: {
     marginRight: 8,
   },
-  searchText: {
+  searchInput: {
     fontSize: 16,
-    color: colors.textDisabled,
+    color: colors.text,
     flex: 1,
+    padding: 0,
   },
   bellIcon: {
     marginLeft: 22,
